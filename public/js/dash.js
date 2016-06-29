@@ -14,15 +14,14 @@ $('#date').pickadate({
 });
 
 
-function clearForm(){
-    $("#restaurant").empty();
-    $('input[name="group1"]:checked').prop( "checked", false );
-    $("#cost").val('');
-    $("#date").val('');
-};
+// function clearForm(){
+//     $("#restaurant").empty();
+//     $('input[name="group1"]:checked').prop( "checked", false );
+//     $("#cost").val('');
+//     $("#date").val('');
+// };
 
-//What happens when login in selected
-//What happens when register is selected
+
 //what happens when the add button is selected
 
 	$(".add").click(function() {
@@ -50,10 +49,11 @@ function clearForm(){
 
             $.post(currentURL + "/enter", newInfo, function(data) {
                 
-                clearForm();                             
+                
 
                 return false;
             });
+            $('.inputForm').reset();
 
         }); //end of click
 //what happens when timeframe is selected
