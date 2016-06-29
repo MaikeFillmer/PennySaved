@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Node Authentication</title>
+    <title>Login</title>
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,30 +11,36 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/dash.css">
     <link rel="stylesheet" href="lib/themes/default.css" id="theme_base">
-<link rel="stylesheet" href="lib/themes/default.date.css" id="theme_date">
+    <link rel="stylesheet" href="lib/themes/default.date.css" id="theme_date">
     <!-- amCharts javascript sources -->
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
     <!-- <script type="text/javascript" src="https://cdn.amcharts.com/lib/3/pie.js"></script> -->
     <script type="text/javascript" src="js/pie.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+    <script src="https://use.fontawesome.com/05eee975dd.js"></script>
     <style>
         body        { padding-top:80px; }
     </style>
 </head>
 <body>
 <div class="container">
+<div class="row">
+<div class="col s8 offset-s2 col m6 offset-m3">
 
-<div class="col-sm-6 col-sm-offset-3">
 
-    <h1><span class="fa fa-sign-in"></span> Login</h1>
+    <h2><span class="fa fa-sign-in"></span> Login</h2>
 
-    <!-- show any messages that come back with authentication -->
-   <!--  <% if (message.length > 0) { %>
-        <div class="alert alert-danger"><%= message %></div>
-    <% } %> -->
-
+    <br>
     <!-- LOGIN FORM -->
+    
+    <a href="/auth/facebook" class="btn btn-primary" style="{background-color: #3B5998 !important}"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+
+    <br>
+    <br>
+    <h6> - or - </h6>
+    <br>
+
     <form action="/login" method="post">
         <div class="form-group">
             <label>UserName</label>
@@ -45,18 +51,23 @@
             <input type="password" class="form-control" name="password">
         </div>
 
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        <button type="submit" class="btn btn-warning btn-lg" style="{background-color: green !important}">Login</button>
     </form>
-    <h1><span class="fa fa-sign-in"></span> Login with Facebook</h1>
-    <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+    
+    <br>
+    
+    <br>
 
-    <hr>
+    <h6>Need an account? <a href="/signup">Signup</a></h6>
+    <h6>Or go <a href="/">home</a>.</h6>
 
-    <p>Need an account? <a href="/signup">Signup</a></p>
-    <p>Or go <a href="/">home</a>.</p>
-
+</div>
 </div>
 
 </div>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="https://use.fontawesome.com/05eee975dd.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
