@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dash</title>
+	<meta name="description" content="A quick and easy way to save money by tracking what you've spent on food throughout your day">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="animate.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" href="lib/themes/default.css" id="theme_base">
+<link rel="stylesheet" href="lib/themes/default.date.css" id="theme_date">
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.amcharts.com/lib/3/pie.js"></script> -->
+    <script type="text/javascript" src="js/pie.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+</head>
+
+<nav class="blue-grey darken-1">
+  <ul id="slide-out" class="side-nav fixed blue-grey darken-1">
+  	<li><H5 class="titleName">A Penny $aved</H5></li>
+  	<br>
+  	<li class="add"><a href="#!"><i class="material-icons left">add</i>Add</a></li>
+     
+    <li><a href="/logout"><i class="material-icons left">power_settings_new</i>Log Out</a></li>
+
+  </ul>
+
+
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo right">  UserName's Dash</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+
+      </ul>
+      <ul class="side-nav blue-grey darken-1" id="mobile-demo">
+  			<li><a href="#!"><H5 class="titleName">A Penny $aved</H5></a></li>
+  			<br>
+  			<li class="add"><a href="#!"><i class="material-icons left">add</i>Add</a></li>	  
+    		<li><a href="/logout"><i class="material-icons left">power_settings_new</i>Log Out</a></li>
+    	
+      </ul>
+    </div>
+          
+</nav>
+
+<main>
+
+	<div class="row">
+		<div class="center-btn overhead">
+			<ul id="dropdown2" class="dropdown-content">
+            <li><a href="#!" data-value=7>7 DAYS</a></li>
+            <li><a href="#!" data-value=14>14 DAYS</a></li>
+            <li><a href="#!" data-value=21>21 DAYS</a></li>
+            <li><a href="#!" data-value=30>30 DAYS</a></li>
+            <li><a href="#!" data-value=45>45 DAYS</a></li>
+            <li><a href="#!" data-value=60>60 DAYS</a></li>
+            <li><a href="#!" data-value=90>90 DAYS</a></li>
+        </ul>
+        <a class="btn dropdown-button btn-flat" href="#!" data-activates="dropdown2"><H6 class="blue-grey-text btnText">Last 30 Days</H6><i class="mdi-navigation-arrow-drop-down right"></i></a>
+		</div>
+        <div class="col s3 m3">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text cost">
+              <span><H6>Breakfast</H6></span>
+              <p><h6 class="BF">$20.00</h6></p>
+            </div>
+          </div>
+        </div>
+        <div class="col s3 m3">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text cost">
+              <span><H6>Lunch</H6></span>
+              <p><H6 class="LH">$13.56</H6></p>
+            </div>
+          </div>
+        </div>
+        <div class="col s3 m3">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text cost">
+              <span><H6>Dinner</H6></span>
+              <p><H6 class="DN">$15.23</H6></p>
+            </div>
+          </div>
+        </div>
+        <div class="col s3 m3">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text cost">
+              <span><H6>Snacks</H6></span>
+              <p><H6 class="SN">$2.49</H6></p>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text">
+              <span class="card-title" >Top 5 Places</span>
+              <div id="chartCard1" style="width: 100%; height: 200px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text">
+              <span class="card-title">Total Spent</span>
+              <div id="chartCard2" style="width: 100%; height: 200px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text">
+              <span class="card-title" >Spending</span>
+              <div id="chartCard3" style="width: 100%; height: 250px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content blue-grey-text">
+              <span class="card-title">Average User Spending</span>
+              <div id="chartCard4" style="width: 100%; height: 250px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!--==================== Modal Structure =============================-->
+    <div id="modal1" class="modal top-sheet">
+        <div class="modal-content">
+            <h6 id="modal-header">Add a Meal</h6>
+            <div class="row">
+                <form class="col s12">
+                <form action="#">
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=0 type="radio" id="test1" />
+                                <label for="test1">Snack</label>
+                            </p>
+                        </div>
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=1 type="radio" id="test2" />
+                                <label for="test2">Breakfast</label>
+                            </p>
+                        </div>
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=2 type="radio" id="test3" />
+                                <label for="test3">Lunch</label>
+                            </p>
+                        </div>
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=3 type="radio" id="test4" />
+                                <label for="test4">Dinner</label>
+                            </p>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="date" type="text" class="validate">
+                            <label for="first_name">Date</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="restaurant" type="text" class="validate">
+                            <label for="first_name">Restaurant</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cost" type="text" class="validate">
+                            <label for="first_name">Cost</label>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </form>
+            </div>
+        </div>
+        <div class="row">
+        <div class="center-btn">
+        	<a class="waves-effect waves-light btn red lighten-2 modal-close" id="addinfo"><i class="material-icons left">add</i>Add</a>
+        	</div>
+        	
+        </div>
+    </div>
+
+
+</main>
+
+<footer>
+	
+</footer>
+
+ <!-- jQuery is required by Materialize to function -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+   <!--  <script type="text/javascript" src="js/custom.js"></script> -->
+    <script type="text/javascript" src="js/dash.js"></script>
+    <script src="lib/picker.js"></script>
+<script src="lib/picker.date.js"></script>
+<script src="lib/picker.time.js"></script>
+
+
+<body>
+
+</body>
+</html>

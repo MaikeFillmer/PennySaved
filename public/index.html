@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>A Penny Saved - Track Eating Out Expenses, Save Money</title>
+    <meta name="description" content="A quick and easy way to save money by tracking what you've spent on food throughout your day">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="animate.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.amcharts.com/lib/3/pie.js"></script> -->
+    <script type="text/javascript" src="js/pie.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+    
+</head>
+
+<body>
+
+    <nav class="blue-grey darken-1">
+        <div class="nav-wrapper  blue-grey darken-1">
+            <a href="#!" class="brand-logo center">A Penny $aved</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/login" class="waves-effect waves-light btn red lighten-2">Login</a></li>
+                <li><a href="/signup" class="waves-effect waves-light btn red lighten-2">Register</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo" style="transform: translateX(-100%);">
+                <li><a href="/login" class="waves-effect waves-light btn  red lighten-2">Login</a></li>
+                <li><a href="/signup" class="waves-effect waves-light btn  red lighten-2">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    
+    <div class="row" id="descriptionArea">
+        <div class="row">
+        <div class="slider col s12">
+        
+            <ul class="slides">
+            <li>
+                <img src="http://lorempixel.com/1366/768/food/3"> 
+                <div class="caption center-align">
+                    <h3>The Average American Family Spends </h3>
+                    <h4 class="light grey-text text-lighten-3">$225 per month on eating out.</h4>
+                </div>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/1366/768/food/1"> 
+                <div class="caption right-align">
+                    <h3>Spending on Eating Out overtook</h3>
+                    <h4 class="light grey-text text-lighten-3">spending on groceries for the first time in 2015.</h4>
+                </div>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/1366/768/food/10">
+                <div class="caption left-align">
+                    <h3>The Average Penny $aved User</h3>
+                    <span class="small light grey-text text-lighten-3">spends </span>
+                    <span class="big">$50</span> 
+                    <span class="small"> less on eating out per month.</span>
+                </div>
+            </li>            
+            </ul>
+        </div>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col s12 m4 l4">
+            <H3 style="font-weight:bold;"> Track </H3> 
+            <br>
+            <img border="0" alt="Money Stacks" src="https://image005.flaticon.com/1/png/512/49/49232.png" width="100" height="100">
+        </div>   
+         <div class="col s12 m4 l4">
+            <H3 style="font-weight:bold;"> Trend </H3> 
+            <br>
+            <img border="0" alt="Money Stacks" src="http://simpleicon.com/wp-content/uploads/bar-chart-7.svg" width="100" height="100">               
+        
+       
+            
+        </div>
+        <div class="col s12 m4 l4">    
+            <H3 style="font-weight:bold;"> Save </H3>
+            <br>
+            <img border="0" alt="Money Stacks" src="https://pixabay.com/static/uploads/photo/2015/10/22/16/42/piggy-bank-1001599__180.png" width="120" height="100">
+        </div>
+        </div>
+       
+
+    </div>
+    
+   
+    <!--==================== Modal Structure =============================-->
+    <div id="modal1" class="modal top-sheet">
+        <div class="modal-content">
+            <h6 id="modal-header">Add Meal</h6>
+            <div class="row">
+                <form class="col s12">
+                <form action="#">
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=0 type="radio" id="test1" />
+                                <label for="test1">Snack</label>
+                            </p>
+                        </div>
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=1 type="radio" id="test2" />
+                                <label for="test2">Breakfast</label>
+                            </p>
+                        </div>
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=2 type="radio" id="test3" />
+                                <label for="test3">Lunch</label>
+                            </p>
+                        </div>
+                        <div class="col s6 m3 l3">
+                            <p>
+                                <input name="group1" value=3 type="radio" id="test4" />
+                                <label for="test4">Dinner</label>
+                            </p>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="cost" type="text" class="validate">
+                            <label for="first_name">Cost</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="restaurant" type="text" class="validate">
+                            <label for="first_name">Restaurant</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="description" type="text" class="validate">
+                            <label for="first_name">Description</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="date" type="text" class="validate">
+                            <label for="first_name">Date</label>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="myButton" id="addinfo">Add Meal</a>
+        </div>
+    </div>
+    </main>
+    <footer class="page-footer blue-grey darken-1">
+          
+            
+          <div class="footer-copyright blue-grey darken-1">
+            <div class="container center">
+            <H5>... is a Penny Earned</H5>
+            
+          </div>
+    </footer>
+    
+    <!-- jQuery is required by Materialize to function -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+
+        
+
+
+</body>
+
+</html>

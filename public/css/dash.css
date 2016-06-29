@@ -1,0 +1,92 @@
+
+
+header, main, footer {
+      padding-left: 250px;
+      padding-top: 10px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+        padding-top: 10px;
+      }
+    }
+
+h6 {
+	font-size: 3vw;
+}
+
+.card-content {
+	padding-left: 2vw !important;
+	padding-right: 2vw !important;
+  text-align: center;
+}
+
+.cost {
+	max-height: 125px;
+}
+
+li {
+  font-size: 40px !important;
+}
+
+.titleName {
+  padding-left: 25px;
+  padding-top: 5px;
+}
+
+@media screen and (min-width: 993px) {
+  h6{
+    font-size: 2vw;
+  }
+
+  .card-content{
+    padding-top: 7px !important;
+  }
+
+}
+
+.BF {
+  color:#d32f2f;
+}
+
+.LH {
+  color:#f9a825;
+}
+
+.DN {
+  color:#388e8c;
+}
+
+.SN {
+  color:#0288d1;
+}
+.modal { 
+    max-width: 500px !important ; 
+    max-height: 100% !important;
+    min-height: 600px !important;
+
+}
+
+.center-btn { text-align: center }
+
+
+.dropdown-button {
+    background-color: #ffffff;
+  }
+
+.dropdown-content {
+  background-color: #eceff1;
+  color: #546e7a !important;
+}
+
+.overhead {
+  margin-bottom: 15px;
+}
+
+
+@media screen and (min-width: 993px) {
+  .dropdown-button {
+  min-height: 50px;
+}
+}
