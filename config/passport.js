@@ -74,9 +74,11 @@ module.exports = function(passport) {
     // facebook will send back the token and profile
     function(token, refreshToken, profile, done) {
         console.log(profile);
+        console.log("here1")
 
         // asynchronous
         process.nextTick(function() {
+            console.log("here2")
 
             // find the user in the database based on their facebook id
             connection.query("SELECT * FROM dbconfig WHERE facebookId = ?",[profile.id], function(err, user) {
