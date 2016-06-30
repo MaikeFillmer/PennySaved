@@ -1,20 +1,13 @@
 var path = require('path');
 var mysql = require('mysql');
-var source = {
-
-//after we deploy to heroku and add the jawsDB then we can add the missing data here:
-    jawsDB: {
-        port: 3306,
-        host     : 'q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        user     : 'xuo8t6hi3fcmh6hz',  
-        password : 'r9iionzy6ttm6hib',
-        database : 'qu6ai46bjrkxx06l'
-    }
-}
-
-var selectedSource = source.jawsDB;
-var connection = mysql.createConnection({ selectedSource})
-
+var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    host: 'localhost',
+    user: 'root',
+    password: "mf4711MF",
+    database: "my_schema"
+})
 
 connection.connect(function(err){
     if(err){
