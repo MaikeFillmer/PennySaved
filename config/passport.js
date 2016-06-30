@@ -81,7 +81,7 @@ module.exports = function(passport) {
 
             // find the user in the database based on their facebook id
             connection.query("SELECT * FROM dbconfig WHERE facebookId = ?",[profile.id], function(err, user) {
-                console.log('length: ' + user.length);
+                //console.log('length: ' + user.length);
                 // if there is an error, stop everything and return that
                 // ie an error connecting to the database
                 if (err){
