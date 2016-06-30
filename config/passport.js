@@ -168,12 +168,11 @@ module.exports = function(passport) {
                         username: username,
                         password: bcrypt.hashSync(password, null, null),  // use the generateHash function in our user model
                         facebookId: "",
-                        facebookToken: "",
-                        facebookName: "",
-                        facebookEmail: ""
+                        facebookToken: ""
                     };
+                    console.log(newUserMysql);
 
-                    var insertQuery = "INSERT INTO dbconfig ( username, password, facebookId, facebookToken, facebookName, facebookEmail) values (?,?,?,?,?,?)";
+                    var insertQuery = "INSERT INTO dbconfig ( username, password, facebookId, facebookToken) values (?,?,?,?)";
                     var variables = [newUserMysql.username, newUserMysql.password, newUserMysql.facebookId, newUserMysql.facebookToken, newUserMysql.facebookName, newUserMysql.facebookEmail];
                     connection.query(insertQuery,variables,function(err, rows) {
                         newUserMysql.id = rows.insertId;
