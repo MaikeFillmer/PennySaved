@@ -100,12 +100,10 @@ module.exports = function(passport) {
                         username: profile.displayName,
                         password: "",
                         facebookId: profile.id,
-                        facebookToken: token,
-                        facebookName: profile.displayName,
-                        facebookEmail: ""
+                        facebookToken: token
                         };
 
-                    var insertQuery = "INSERT INTO dbconfig ( username, password, facebookId, facebookToken, facebookName, facebookEmail) values (?,?,?,?,?,?)";
+                    var insertQuery = "INSERT INTO dbconfig ( username, password, facebookId, facebookToken) values (?,?,?,?)";
                     console.log("profile: " + newUserMysql);
                     var variables = [newUserMysql.username, newUserMysql.password, newUserMysql.facebookId, newUserMysql.facebookToken, newUserMysql.facebookName, newUserMysql.facebookEmail];
                     connection.query(insertQuery, variables, function(err,rows){
