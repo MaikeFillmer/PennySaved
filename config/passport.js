@@ -5,7 +5,7 @@ var LocalStrategy   = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 
-var config = require('../config/config.js')
+var config = require('./config.js')
 var connection = mysql.createConnection(config.jawsDB);
 
 
