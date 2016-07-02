@@ -4,7 +4,6 @@ var mysql = require('mysql');
 var config = require('../config/config.js')
 var connection = mysql.createConnection(config.jawsDB);
 
-var b=3;
 connection.connect(function(err){ 
 
     if(err){

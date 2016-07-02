@@ -3,3 +3,4 @@ config/auth.js
 config/config.js
 
 .DS_Store
+*.log
