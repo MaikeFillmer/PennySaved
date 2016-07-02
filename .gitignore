@@ -1,3 +1,4 @@
 node_modules
-config/
+config/auth.js
+config/config.ja
 .DS_Store
