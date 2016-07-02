@@ -1,8 +1,5 @@
 node_modules
-<<<<<<< HEAD
 config/auth.js
 config/config.js
-=======
-config
->>>>>>> 6faff9c2a6c2662c0a302990746547dbde85f1fc
+
 .DS_Store
