@@ -15,6 +15,7 @@ CREATE TABLE dbconfig
  ); 
 
 
+
 create table foodinfo
 (
 	id int not null auto_increment,
@@ -25,3 +26,4 @@ create table foodinfo
     Fid varchar(255) not null,
     primary key (id)
 );
+

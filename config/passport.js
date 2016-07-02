@@ -8,6 +8,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var config = require('../config/config.js')
 var connection = mysql.createConnection(config.jawsDB);
 
+
 var configAuth = require('./auth');
 
 // load up the user model

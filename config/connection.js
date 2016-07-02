@@ -6,8 +6,10 @@
 // var Sequelize = require("sequelize");
 
 // Lists out connection options
+
 var config = require('./config.js');
 var source =  config
+
 
 // Selects a connection (can be changed quickly as needed)
 var selectedSource = source.source;
