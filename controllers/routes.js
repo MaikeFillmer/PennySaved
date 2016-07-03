@@ -2,7 +2,7 @@ var path = require('path');
 var mysql = require('mysql');
 
 var config = require('../config/config.js')
-var connection = mysql.createConnection(config.jawsDB);
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 connection.connect(function(err){ 
 
